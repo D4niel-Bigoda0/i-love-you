@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel & Adriele</title>
+</head>
+<body>
+
+    <div class="photo-container">
+        <img src="img.img/Eu te escolheria mill.png" alt="Foto do casal">
+    </div>
+
+    <div class="text-container">
+        <h1>Daniel & Adriele</h1>
+        <p>Eu te amo meu Amor, minha nina, Eu te amo além de tudo meu Amor, Que nosso amor continue crescendo mais e mais! Eu te amo pra sempre! Você é mais do que eu poderia imaginar e sonhar, vc é tudo pra mim, Feliz 2 Anos meu tudooo! 25/03/25 💖</p>
+    </div>
+
+    <script>
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.innerHTML = "❤️";
+            heart.classList.add("heart");
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = Math.random() * 3 + 2 + "s";
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 5000);
+        }
+        setInterval(createHeart, 500);
+    </script>
+    
+    <style>
+        body {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffebee;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+        .photo-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .photo-container img {
+            width: 300px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .text-container {
+            flex: 1;
+            max-width: 400px;
+            color: #880e4f;
+            font-size: 18px;
+        }
+        .heart {
+            position: absolute;
+            top: -10px;
+            font-size: 24px;
+            color: red;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            from {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</body>
+</html>
